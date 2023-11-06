@@ -14,27 +14,30 @@ struct AppList: View {
     var appImage:String
     
     var body: some View {
-        ZStack {
-            VStack {
+            HStack {
                 HStack {
                     Image(appImage)
                         .resizable()
                         .scaledToFit()
-                        .frame(height:100)
+                        .frame(height:70)
+                        .cornerRadius(20)
+                    LazyVStack(alignment:.leading) {
+                        Text(appName)
+                        Text(appDownloadDate)
+                            .foregroundColor(Color("Light Grey"))
+                    }
+                    Spacer()
                 }
-                VStack {
-                    Text(appName)
-                }
-                VStack {
-                    Text(appDownloadDate)
-                }
-            }
+                .padding(6)
+                
+            }.preferredColorScheme(.dark)
+            .frame(height: 87)
         }
     }
-}
+
 
 #Preview {
     AppList(appName: "PH Sun Life",
-            appDownloadDate: "Oct 27,2023",
+            appDownloadDate: "Oct 17, 2023",
             appImage: "PHSunLife")
 }
