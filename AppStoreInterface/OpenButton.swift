@@ -14,7 +14,7 @@ struct OpenButton: View {
             Image(systemName: "capsule.fill")
                     .resizable()
                     .scaledToFit()
-                    .frame(width:50)
+                    .frame(width:55)
                 .foregroundColor(Color("Dark Grey"))
             Text("Open")
                 .font(.system(.body, design: .rounded))

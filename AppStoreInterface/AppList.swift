@@ -29,10 +29,9 @@ struct AppList: View {
                     Spacer()
                 }
                 OpenButton()
-                .padding(6)
                 
             }.preferredColorScheme(.dark)
-            .frame(height: 87)
+            .frame(height: 75)
         }
     }
 

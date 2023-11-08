@@ -12,9 +12,47 @@ struct ContentView: View {
         //            first layer background color/theme
         NavigationStack {
             VStack {
-                ZStack(alignment:.bottom){
-                    Text("Search bar")
-                }
+                ZStack {
+                    Rectangle()
+                        .foregroundColor(.darkGrey)
+                        .frame(height: 35)
+                        .cornerRadius(10)
+                    HStack {
+                        LazyVStack(alignment:.leading) {
+                            ZStack {
+                                Rectangle()
+                                    .foregroundColor(.lightGrey)
+                                    .frame(height: 25)
+                                    .cornerRadius(7)
+                                Text("All")
+                                    .font(.system(size: 14))
+                            }
+                        }.padding(4)
+                        Text("Not on this iPhone")
+                            .font(.system(size: 14))
+                            .padding(.horizontal)
+                            .frame(width: 175)
+                    }
+                    
+                }.padding(.horizontal)
+                
+                Spacer()
+                    .frame(height: 15)
+                
+                ZStack(alignment:.leading){
+                    Rectangle()
+                        .foregroundColor(.darkGrey)
+                        .frame(height: 35)
+                        .cornerRadius(10)
+                    LazyVStack(alignment:.leading) {
+                        HStack {
+                            Image(systemName: "magnifyingglass")
+                            Text("Search bar")
+                        }.padding(5)
+                            .foregroundColor(.lightGrey)
+                    }
+                }.padding(.horizontal)
+                
                 ZStack {
                     Color.black
                         .ignoresSafeArea()
@@ -47,8 +85,7 @@ struct ContentView: View {
                                         appImage: "PackPoint")
                             }.listRowInsets(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 0))
                         }.listStyle(.plain)
-                    }
-                    
+                    }.padding(.horizontal)
                 }.preferredColorScheme(.dark)
             }
         }
