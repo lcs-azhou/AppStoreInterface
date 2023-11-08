@@ -13,6 +13,7 @@
 		79970D712AF9768E0033B2C2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79970D702AF9768E0033B2C2 /* Preview Assets.xcassets */; };
 		79970D782AF979060033B2C2 /* AppList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79970D772AF979060033B2C2 /* AppList.swift */; };
 		79970D7A2AF991680033B2C2 /* OpenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79970D792AF991680033B2C2 /* OpenButton.swift */; };
+		79970D7C2AF9A2940033B2C2 /* icloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79970D7B2AF9A2940033B2C2 /* icloud.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		79970D702AF9768E0033B2C2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		79970D772AF979060033B2C2 /* AppList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppList.swift; sourceTree = "<group>"; };
 		79970D792AF991680033B2C2 /* OpenButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenButton.swift; sourceTree = "<group>"; };
+		79970D7B2AF9A2940033B2C2 /* icloud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = icloud.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				79970D6B2AF9768C0033B2C2 /* ContentView.swift */,
 				79970D772AF979060033B2C2 /* AppList.swift */,
 				79970D792AF991680033B2C2 /* OpenButton.swift */,
+				79970D7B2AF9A2940033B2C2 /* icloud.swift */,
 				79970D6D2AF9768E0033B2C2 /* Assets.xcassets */,
 				79970D6F2AF9768E0033B2C2 /* Preview Content */,
 			);
@@ -144,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				79970D6C2AF9768C0033B2C2 /* ContentView.swift in Sources */,
+				79970D7C2AF9A2940033B2C2 /* icloud.swift in Sources */,
 				79970D7A2AF991680033B2C2 /* OpenButton.swift in Sources */,
 				79970D782AF979060033B2C2 /* AppList.swift in Sources */,
 				79970D6A2AF9768C0033B2C2 /* AppStoreInterfaceApp.swift in Sources */,

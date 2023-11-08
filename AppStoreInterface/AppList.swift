@@ -28,6 +28,7 @@ struct AppList: View {
                     }
                     Spacer()
                 }
+                OpenButton()
                 .padding(6)
                 
             }.preferredColorScheme(.dark)

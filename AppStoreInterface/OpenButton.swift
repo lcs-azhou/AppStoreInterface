@@ -21,6 +21,7 @@ struct OpenButton: View {
                 .fontWeight(.bold)
                 .foregroundColor(.blue)
         }.preferredColorScheme(.dark)
+
         
     }
 }
