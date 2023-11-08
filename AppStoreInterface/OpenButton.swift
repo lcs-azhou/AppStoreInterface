@@ -11,10 +11,9 @@ struct OpenButton: View {
     var body: some View {
     
         ZStack {
-            Image(systemName: "capsule.fill")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width:55)
+            Rectangle()
+                    .frame(width:65,height: 30)
+                    .cornerRadius(15)
                 .foregroundColor(Color("Dark Grey"))
             Text("Open")
                 .font(.system(.body, design: .rounded))

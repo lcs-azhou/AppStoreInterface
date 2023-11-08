@@ -12,6 +12,7 @@ struct ContentView: View {
         //            first layer background color/theme
         NavigationStack {
             VStack {
+                Spacer()
                 ZStack {
                     Rectangle()
                         .foregroundColor(.darkGrey)
@@ -39,19 +40,6 @@ struct ContentView: View {
                 Spacer()
                     .frame(height: 15)
                 
-                ZStack(alignment:.leading){
-                    Rectangle()
-                        .foregroundColor(.darkGrey)
-                        .frame(height: 35)
-                        .cornerRadius(10)
-                    LazyVStack(alignment:.leading) {
-                        HStack {
-                            Image(systemName: "magnifyingglass")
-                            Text("Search bar")
-                        }.padding(5)
-                            .foregroundColor(.lightGrey)
-                    }
-                }.padding(.horizontal)
                 
                 ZStack {
                     Color.black
@@ -59,6 +47,19 @@ struct ContentView: View {
                     HStack {
                         List {
                             Group {
+                                ZStack(alignment:.leading){
+                                    Rectangle()
+                                        .foregroundColor(.darkGrey)
+                                        .frame(height: 35)
+                                        .cornerRadius(10)
+                                    LazyVStack(alignment:.leading) {
+                                        HStack {
+                                            Image(systemName: "magnifyingglass")
+                                            Text("Search bar")
+                                        }.padding(5)
+                                            .foregroundColor(.lightGrey)
+                                    }
+                                }
                                 AppList(appName: "PH Sun Life",
                                         appDownloadDate: "Oct 27,2023",
                                         appImage: "PHSunLife")
@@ -85,6 +86,27 @@ struct ContentView: View {
                                         appImage: "PackPoint")
                             }.listRowInsets(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 0))
                         }.listStyle(.plain)
+                            .toolbar {
+                                ToolbarItem(placement:.topBarLeading) {
+                                    Button(action:{}){
+                                        Image(systemName: "chevron.backward")
+                                            .fontWeight(.semibold)
+                                        Text("All Purchases")
+                                            .fontWeight(.semibold)
+                                    }
+                                }
+                                ToolbarItem(placement: .topBarTrailing) {
+                                    HStack{
+                                        Button(action:{}) {
+                                            Text("Done")
+                                                .fontWeight(.semibold)
+                                                .padding(.horizontal)
+                                            
+                                        }
+                                    }
+                                }
+                            }.navigationTitle("Ansheng")
+                            .navigationBarTitleDisplayMode(.inline)
                     }.padding(.horizontal)
                 }.preferredColorScheme(.dark)
             }
